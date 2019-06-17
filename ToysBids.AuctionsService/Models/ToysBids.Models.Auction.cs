@@ -11,9 +11,9 @@ namespace ToysBids.AuctionsService.Models
     public class Publication
     {
         public long Id { get; set; }
-        public string auctionBundleId { get; set; }
+        public long auctionBundleId { get; set; }
         [Column(name: "StartAmount")]
-        public string price { get; set; }
+        public decimal price { get; set; }
 
         [NotMapped]
         public IFormFile data { get; set; }
@@ -25,10 +25,9 @@ namespace ToysBids.AuctionsService.Models
         public string Title { get; set; }
         public DateTime BeginDate { get; set; }
         public DateTime EndDate { get; set; }
-        public int MinimumAmount { get; set; }
+        public decimal MinimumAmount { get; set; }
         public int IsActive { get; set; }
-        public long CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }
-
+        public int CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }    
     }
 }

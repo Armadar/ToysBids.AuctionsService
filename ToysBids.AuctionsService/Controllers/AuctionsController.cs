@@ -24,6 +24,28 @@ namespace ToysBids.AuctionsService.Controllers
         {
             return await _context.AuctionBundle.ToListAsync();
         }
+        // GET: api/Exchanges/5
+        [HttpGet("getauctionsbyauctionbundleid/{id}")]
+        public async Task<ActionResult<IEnumerable<Publication>>> GetAuctionsByAuctionBundleId(long id)
+        {
+            try
+            {
+                var auctions = await _context.Publication.Where(x => x.auctionBundleId == id).ToListAsync();
+
+                if (auctions == null)
+                {
+                    return NotFound();
+                }
+
+                return auctions;
+            }
+            catch (Exception ex)
+            {
+                var err = ex;
+                throw;
+            }
+
+        }
 
         public AuctionsController(IImageHandler imageHandler,AuctionsContext context)
         {
@@ -44,7 +66,7 @@ namespace ToysBids.AuctionsService.Controllers
                 auction.BeginDate = DateTime.Now;
                 auction.MinimumAmount = 2;
                 auction.IsActive = 1;
-                auction.CreatedBy = auction.SellerID;
+                auction.CreatedBy = Convert.ToInt32(auction.SellerID);
                 auction.CreatedOn = DateTime.Now;
 
                 _context.Publication.Add(auction);
@@ -61,7 +83,7 @@ namespace ToysBids.AuctionsService.Controllers
 
         // GET: api/Exchanges/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<AuctionBundle>> GetExchange(long id)
+        public async Task<ActionResult<AuctionBundle>> GetAuctionBundle(long id)
         {
             var exchange = await _context.AuctionBundle.FindAsync(id);
 
