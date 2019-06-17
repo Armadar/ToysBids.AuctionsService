@@ -46,7 +46,19 @@ namespace ToysBids.AuctionsService.Controllers
             }
 
         }
+        // GET: api/Exchanges/5
+        [HttpGet("getauctionInfo/{id}")]
+        public async Task<ActionResult<Publication>> GetAuctionInfo(long id)
+        {
+            var exchange = await _context.Publication.FindAsync(id);
 
+            if (exchange == null)
+            {
+                return NotFound();
+            }
+
+            return exchange;
+        }
         public AuctionsController(IImageHandler imageHandler,AuctionsContext context)
         {
             _imageHandler = imageHandler;
