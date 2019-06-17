@@ -1,0 +1,12 @@
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.deps.json
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.dll
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.pdb
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.csprojAssemblyReference.cache
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.csproj.CoreCompileInputs.cache
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.AssemblyInfoInputs.cache
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.AssemblyInfo.cs
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.csproj.CopyComplete
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.dll
+C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\Armadar.ImageWriter\obj\Debug\netcoreapp2.2\Armadar.ImageWriter.pdb

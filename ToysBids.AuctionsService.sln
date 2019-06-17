@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToysBids.AuctionsService", "ToysBids.AuctionsService\ToysBids.AuctionsService.csproj", "{C1C15687-C0D2-493D-B4AA-7DE100A7DCEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armadar.ImageWriter", "Armadar.ImageWriter\Armadar.ImageWriter.csproj", "{6A6B2FD4-B6E1-4FE0-94E2-B0097D751973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1C15687-C0D2-493D-B4AA-7DE100A7DCEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C15687-C0D2-493D-B4AA-7DE100A7DCEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C15687-C0D2-493D-B4AA-7DE100A7DCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C15687-C0D2-493D-B4AA-7DE100A7DCEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6B2FD4-B6E1-4FE0-94E2-B0097D751973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6B2FD4-B6E1-4FE0-94E2-B0097D751973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6B2FD4-B6E1-4FE0-94E2-B0097D751973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6B2FD4-B6E1-4FE0-94E2-B0097D751973}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F8E0F8E-158A-413D-8457-3ECB79EBEE1C}
+	EndGlobalSection
+EndGlobal
