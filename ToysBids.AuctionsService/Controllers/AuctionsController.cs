@@ -59,6 +59,31 @@ namespace ToysBids.AuctionsService.Controllers
 
             return exchange;
         }
+        [HttpPut("updateauction/{id}/{baseprice}")]
+        public async Task<IActionResult> UpdateAuction(long id, decimal basePrice)
+        {
+            if (id ==0 || basePrice == 0)
+            {
+                return BadRequest();
+            }
+
+            var publication = await _context.Publication.FindAsync(id);
+            publication.price = basePrice;
+            _context.Entry(publication).State = EntityState.Modified;
+
+            try
+            { 
+
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                string x = ex.Message;
+                throw;
+            }
+
+            return NoContent();
+        }
         public AuctionsController(IImageHandler imageHandler,AuctionsContext context)
         {
             _imageHandler = imageHandler;
