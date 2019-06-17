@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\ToysBids.AuctionsService\\ToysBids.AuctionsService.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
+        "projectName": "Armadar.ImageWriter",
+        "projectPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
+        "packagesPath": "C:\\Users\\jalvino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jalvino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\ToysBids.AuctionsService\\ToysBids.AuctionsService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\ToysBids.AuctionsService\\ToysBids.AuctionsService.csproj",
+        "projectName": "ToysBids.AuctionsService",
+        "projectPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\ToysBids.AuctionsService\\ToysBids.AuctionsService.csproj",
+        "packagesPath": "C:\\Users\\jalvino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\ToysBids.AuctionsService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jalvino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj": {
+                "projectPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

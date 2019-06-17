@@ -15,3 +15,20 @@ C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsSer
 C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.dll
 C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.pdb
 C:\Users\Jesus Alvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.csproj.CopyComplete
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\ToysBids.AuctionsService.deps.json
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\ToysBids.AuctionsService.runtimeconfig.json
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\ToysBids.AuctionsService.runtimeconfig.dev.json
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\ToysBids.AuctionsService.dll
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\ToysBids.AuctionsService.pdb
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.dll
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\bin\Debug\netcoreapp2.2\Armadar.ImageWriter.pdb
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.csprojAssemblyReference.cache
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.csproj.CoreCompileInputs.cache
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.RazorAssemblyInfo.cache
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.RazorAssemblyInfo.cs
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.AssemblyInfoInputs.cache
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.AssemblyInfo.cs
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.RazorTargetAssemblyInfo.cache
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.csproj.CopyComplete
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.dll
+C:\Users\jalvino\source\repos\ToysBids.AuctionsService\ToysBids.AuctionsService\obj\Debug\netcoreapp2.2\ToysBids.AuctionsService.pdb

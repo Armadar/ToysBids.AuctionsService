@@ -29,7 +29,16 @@ namespace ToysBids.AuctionsService.Controllers
             {
                 string name = Guid.NewGuid().ToString();
                 var x = await _imageHandler.UploadImage(auction.data, name);
-                auction.MainPicture = name;
+
+                auction.MainPicture = "http://localhost/images/" + name+".jpg";
+                auction.SmallPicture = auction.MainPicture;
+                auction.Title = string.Empty;
+                auction.BeginDate = DateTime.Now;
+                auction.MinimumAmount = 2;
+                auction.IsActive = 1;
+                auction.CreatedBy = auction.SellerID;
+                auction.CreatedOn = DateTime.Now;
+
                 _context.Publication.Add(auction);
                 await _context.SaveChangesAsync();
 
