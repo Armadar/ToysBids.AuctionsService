@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ToysBids.AuctionsService.Data;
 using ToysBids.AuctionsService.Handlers;
 using ToysBids.AuctionsService.Models;
@@ -16,6 +17,13 @@ namespace ToysBids.AuctionsService.Controllers
     {
         private readonly AuctionsContext _context;
         private readonly IImageHandler _imageHandler;
+
+        // GET: api/Exchanges
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<AuctionBundle>>> GetAuctionBundles()
+        {
+            return await _context.AuctionBundle.ToListAsync();
+        }
 
         public AuctionsController(IImageHandler imageHandler,AuctionsContext context)
         {
