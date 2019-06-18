@@ -18,6 +18,12 @@ namespace ToysBids.AuctionsService.Controllers
         private readonly AuctionsContext _context;
         private readonly IImageHandler _imageHandler;
 
+        public AuctionsController(IImageHandler imageHandler, AuctionsContext context)
+        {
+            _imageHandler = imageHandler;
+            _context = context;
+        }
+
         [HttpPost]
         public async Task<ActionResult<AuctionBundle>> PostAuctionBundle([FromForm]AuctionBundle auctionBundle)
         {
@@ -29,7 +35,7 @@ namespace ToysBids.AuctionsService.Controllers
                 auctionBundle.CreatedOn = DateTime.Now;
                 _context.AuctionBundle.Add(auctionBundle);
                 await _context.SaveChangesAsync();
-                r.message = auctionBundle.ID.ToString();
+                r.auctionBundleId = auctionBundle.ID.ToString();
             }
             catch (Exception ex)
             {
@@ -47,7 +53,7 @@ namespace ToysBids.AuctionsService.Controllers
             //            https://social.msdn.microsoft.com/Forums/en-US/30b6e9c6-d414-4b1d-9fb1-b5ff5f455ea9/stored-procedure-or-linq-for-million-of-records-with-ef-core-20?forum=linqtosql
             // TODO: Take in mind use raw SQL: https://docs.microsoft.com/en-us/ef/core/querying/raw-sql
             //TODO: Check new GroupBy feature from EF 2.1: https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-1-preview-2/
-
+            //TODO: use pagination
             var query = (from auctionBundle in _context.AuctionBundle
                          join auction in _context.Publication
                          on auctionBundle.ID equals auction.auctionBundleId
@@ -143,18 +149,14 @@ namespace ToysBids.AuctionsService.Controllers
 
             return NoContent();
         }
-        public AuctionsController(IImageHandler imageHandler,AuctionsContext context)
-        {
-            _imageHandler = imageHandler;
-            _context = context;
-        }
+
         [HttpPost("uploadauction")]
         public async Task<IActionResult> UploadAuction([FromForm]  Publication auction)
         {            
             try
             {
                 string name = Guid.NewGuid().ToString();
-                var x = await _imageHandler.UploadImage(auction.data, name);
+                var x = await _imageHandler.UploadImage(auction.image, name);
 
                 auction.MainPicture = "http://localhost/images/" + name+".jpg";
                 auction.SmallPicture = auction.MainPicture;

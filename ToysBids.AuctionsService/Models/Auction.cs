@@ -16,7 +16,7 @@ namespace ToysBids.AuctionsService.Models
         public decimal price { get; set; }
 
         [NotMapped]
-        public IFormFile data { get; set; }
+        public IFormFile image { get; set; }
         public int Type { get; set; }
         public int CategoryID { get; set; }
         public long SellerID { get; set; }
