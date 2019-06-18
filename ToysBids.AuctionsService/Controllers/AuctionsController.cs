@@ -124,20 +124,21 @@ namespace ToysBids.AuctionsService.Controllers
             return exchange;
         }
         //TODO Use PUT instead of Get
-        [HttpGet("updateauction/{id}/{baseprice}")]
-        public async Task<IActionResult> UpdateAuction(long id, decimal basePrice)
+        [HttpPost("updateauction")]
+        public async Task<IActionResult> UpdateAuction([FromForm]  Publication auction)
         {
-            if (id ==0 || basePrice == 0)
+            if (auction.Id == 0 || auction.price == 0)
             {
                 return BadRequest();
             }
 
-            var publication = await _context.Publication.FindAsync(id);
-            publication.price = basePrice;
+            var publication = await _context.Publication.FindAsync(auction.Id);
+            publication.price = auction.price;
+            publication.Description = auction.Description;
             _context.Entry(publication).State = EntityState.Modified;
 
             try
-            { 
+            {
 
                 await _context.SaveChangesAsync();
             }

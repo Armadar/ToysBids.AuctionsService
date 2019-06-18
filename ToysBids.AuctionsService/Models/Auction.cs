@@ -28,6 +28,7 @@ namespace ToysBids.AuctionsService.Models
         public decimal MinimumAmount { get; set; }
         public int IsActive { get; set; }
         public int CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }    
+        public DateTime CreatedOn { get; set; }
+        public string Description { get; set; }
     }
 }
