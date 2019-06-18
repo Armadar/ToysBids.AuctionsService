@@ -59,7 +59,8 @@ namespace ToysBids.AuctionsService.Controllers
 
             return exchange;
         }
-        [HttpPut("updateauction/{id}/{baseprice}")]
+        //TODO Use PUT instead of Get
+        [HttpGet("updateauction/{id}/{baseprice}")]
         public async Task<IActionResult> UpdateAuction(long id, decimal basePrice)
         {
             if (id ==0 || basePrice == 0)
@@ -135,21 +136,10 @@ namespace ToysBids.AuctionsService.Controllers
         // POST: api/Exchanges
         [HttpPost]
         public async Task<ActionResult<AuctionBundle>> PostAuctionBundle([FromForm]AuctionBundle auctionBundle)
-        {
-            
+        {            
             try
             {
-                string title = "";
-                switch (auctionBundle.CategoryID)
-                {
-                    case 1:  title = "Transformers"; break;
-                    case 2: title = "Star Wars"; break;
-                    case 3: title = "Marvel"; break;
-                }
-
-                auctionBundle.Title = "Subasta - " + title;
                 auctionBundle.CreatedOn = DateTime.Now;
-
                 _context.AuctionBundle.Add(auctionBundle);
                 await _context.SaveChangesAsync();
             }
