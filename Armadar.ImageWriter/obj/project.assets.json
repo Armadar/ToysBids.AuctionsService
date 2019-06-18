@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jesus Alvino\\.nuget\\packages\\": {},
+    "C:\\Users\\jalvino\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jesus Alvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
+      "projectUniqueName": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
       "projectName": "Armadar.ImageWriter",
-      "projectPath": "C:\\Users\\Jesus Alvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
-      "packagesPath": "C:\\Users\\Jesus Alvino\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jesus Alvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\obj\\",
+      "projectPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\Armadar.ImageWriter.csproj",
+      "packagesPath": "C:\\Users\\jalvino\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jalvino\\source\\repos\\ToysBids.AuctionsService\\Armadar.ImageWriter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Jesus Alvino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jalvino\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

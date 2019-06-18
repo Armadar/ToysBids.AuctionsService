@@ -11,6 +11,9 @@ namespace ToysBids.AuctionsService.Models
         public long StoreID { get; set; }
         public int CategoryID { get; set; }
         public string Title { get; set; }
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
         public DateTime CreatedOn { get; set; }
+        public long CreatedBy { get; set; }
     }
 }

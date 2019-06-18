@@ -18,13 +18,34 @@ namespace ToysBids.AuctionsService.Controllers
         private readonly AuctionsContext _context;
         private readonly IImageHandler _imageHandler;
 
-        // GET: api/Exchanges
+        [HttpPost]
+        public async Task<ActionResult<AuctionBundle>> PostAuctionBundle([FromForm]AuctionBundle auctionBundle)
+        {
+            dynamic r = new System.Dynamic.ExpandoObject();
+
+            try
+            {
+                auctionBundle.From = DateTime.Now;
+                auctionBundle.CreatedOn = DateTime.Now;
+                _context.AuctionBundle.Add(auctionBundle);
+                await _context.SaveChangesAsync();
+                r.message = auctionBundle.ID.ToString();
+            }
+            catch (Exception ex)
+            {
+                r.message = ex.Message;
+                //throw;
+            }
+            //TODO: Return an error object ?
+            return new ObjectResult(r);
+        }
+        // GET: api/Auctions
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AuctionBundle>>> GetAuctionBundles()
         {
             return await _context.AuctionBundle.ToListAsync();
         }
-        // GET: api/Exchanges/5
+        // GET: api/Auctions/5
         [HttpGet("getauctionsbyauctionbundleid/{id}")]
         public async Task<ActionResult<IEnumerable<Publication>>> GetAuctionsByAuctionBundleId(long id)
         {
@@ -46,7 +67,7 @@ namespace ToysBids.AuctionsService.Controllers
             }
 
         }
-        // GET: api/Exchanges/5
+        // GET: api/Auctions/5
         [HttpGet("getauctionInfo/{id}")]
         public async Task<ActionResult<Publication>> GetAuctionInfo(long id)
         {
@@ -119,7 +140,7 @@ namespace ToysBids.AuctionsService.Controllers
             }            
         }
 
-        // GET: api/Exchanges/5
+        // GET: api/Auctions/5
         [HttpGet("{id}")]
         public async Task<ActionResult<AuctionBundle>> GetAuctionBundle(long id)
         {
@@ -131,30 +152,6 @@ namespace ToysBids.AuctionsService.Controllers
             }
 
             return exchange;
-        }
-
-        // POST: api/Exchanges
-        [HttpPost]
-        public async Task<ActionResult<AuctionBundle>> PostAuctionBundle([FromForm]AuctionBundle auctionBundle)
-        {            
-            try
-            {
-                auctionBundle.CreatedOn = DateTime.Now;
-                _context.AuctionBundle.Add(auctionBundle);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                string x = ex.Message;
-                throw;
-            }
-
-
-
-            dynamic r = new System.Dynamic.ExpandoObject();
-            r.message = auctionBundle.ID.ToString();
-
-            return new ObjectResult(r);
         }
     }
 }
