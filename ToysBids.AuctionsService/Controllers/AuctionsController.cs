@@ -43,7 +43,44 @@ namespace ToysBids.AuctionsService.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AuctionBundle>>> GetAuctionBundles()
         {
-            return await _context.AuctionBundle.ToListAsync();
+            //TODO: Check performance:
+            //            https://social.msdn.microsoft.com/Forums/en-US/30b6e9c6-d414-4b1d-9fb1-b5ff5f455ea9/stored-procedure-or-linq-for-million-of-records-with-ef-core-20?forum=linqtosql
+            // TODO: Take in mind use raw SQL: https://docs.microsoft.com/en-us/ef/core/querying/raw-sql
+            //TODO: Check new GroupBy feature from EF 2.1: https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-1-preview-2/
+
+            var query = (from auctionBundle in _context.AuctionBundle
+                         join auction in _context.Publication
+                         on auctionBundle.ID equals auction.auctionBundleId
+                         group new { auctionBundle, auction } by new { auctionBundle.ID, auctionBundle.StoreID, auctionBundle.CategoryID, auctionBundle.Title, auctionBundle.From, auctionBundle.To, auctionBundle.CreatedOn, auctionBundle.CreatedBy } into newGroup
+                         select new
+                         {
+                             newGroup.Key.ID,
+                             newGroup.Key.StoreID,
+                             newGroup.Key.CategoryID,
+                             newGroup.Key.Title,
+                             newGroup.Key.From,
+                             newGroup.Key.To,
+                             newGroup.Key.CreatedOn,
+                             newGroup.Key.CreatedBy,
+                             auctionsCount = newGroup.Count()
+                         }).ToList();
+            List<AuctionBundle> r = new List<AuctionBundle>();
+            query.ForEach(item =>
+            r.Add(new AuctionBundle()
+            {
+                ID = item.ID,
+                StoreID = item.StoreID,
+                CategoryID = item.CategoryID,
+                Title = item.Title,
+                From = item.From,
+                To = item.To,
+                CreatedOn = item.CreatedOn,
+                CreatedBy = item.CreatedBy,
+                auctionsCount = item.auctionsCount
+            })
+            );
+            //return await _context.AuctionBundle.ToListAsync();
+            return r;
         }
         // GET: api/Auctions/5
         [HttpGet("getauctionsbyauctionbundleid/{id}")]
