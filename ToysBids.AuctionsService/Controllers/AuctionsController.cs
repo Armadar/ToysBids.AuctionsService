@@ -155,11 +155,12 @@ namespace ToysBids.AuctionsService.Controllers
         public async Task<IActionResult> UploadAuction([FromForm]  Publication auction)
         {            
             try
-            {
-                string name = Guid.NewGuid().ToString();
-                var x = await _imageHandler.UploadImage(auction.image, name);
+            {            
+                var generatedName = await _imageHandler.UploadImage(auction.image);
+                dynamic r = new System.Dynamic.ExpandoObject();
+                r.generatedImage = generatedName;
 
-                auction.MainPicture = "http://localhost/images/" + name+".jpg";
+                auction.MainPicture = "http://localhost/images/" + generatedName;
                 auction.SmallPicture = auction.MainPicture;
                 auction.Title = string.Empty;
                 auction.BeginDate = DateTime.Now;
@@ -171,7 +172,7 @@ namespace ToysBids.AuctionsService.Controllers
                 _context.Publication.Add(auction);
                 await _context.SaveChangesAsync();
 
-                return x;
+                return new ObjectResult(r);
             }
             catch (Exception ex)
             {

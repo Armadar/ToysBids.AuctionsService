@@ -8,6 +8,6 @@ namespace Armadar.ImageWriter
 {
     public interface IImageWriter
     {
-        Task<string> UploadImage(IFormFile file,string name);
+        Task<string> UploadImage(IFormFile file);
     }
 }

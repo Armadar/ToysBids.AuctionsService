@@ -11,7 +11,7 @@ namespace ToysBids.AuctionsService.Handlers
 {
     public interface IImageHandler
     {
-        Task<IActionResult> UploadImage(IFormFile file, string name);
+        Task<string> UploadImage(IFormFile file);
     }
     public class ImageHandler : IImageHandler
     {
@@ -21,13 +21,10 @@ namespace ToysBids.AuctionsService.Handlers
             _imageWriter = imageWriter;
         }
 
-        public async Task<IActionResult> UploadImage(IFormFile file, string name)
+        public async Task<string> UploadImage(IFormFile file)
         {
-            var result = await _imageWriter.UploadImage(file, name);
-            dynamic r = new ExpandoObject();
-            r.message = result;
-
-            return new ObjectResult(r);
+            var result = await _imageWriter.UploadImage(file);
+            return result;
         }
     }
 }

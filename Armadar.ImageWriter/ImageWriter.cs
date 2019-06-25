@@ -9,11 +9,11 @@ namespace Armadar.ImageWriter
 {
     public class ImageWriter : IImageWriter
     {
-        public async Task<string> UploadImage(IFormFile file,string name)
+        public async Task<string> UploadImage(IFormFile file )
         {
             if (CheckIfImageFile(file))
             {
-                return await WriteFile(file,name);
+                return await WriteFile(file);
             }
 
             return "Invalid image file";
@@ -41,13 +41,13 @@ namespace Armadar.ImageWriter
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
-        public async Task<string> WriteFile(IFormFile file,string name)
+        public async Task<string> WriteFile(IFormFile file)
         {
             string fileName;
             try
             {
                 var extension = "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1];
-                fileName = name + extension;
+                fileName = Guid.NewGuid().ToString() + extension;
                 //TODO: extract the value to the config
                 //var path = Path.Combine(Directory.GetCurrentDirectory(), "images", fileName);
                 var path = Path.Combine(@"C:\inetpub\wwwroot", "images", fileName);
